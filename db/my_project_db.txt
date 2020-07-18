@@ -1,0 +1,13 @@
+CREATE DATABASE my_project;
+
+USE my_project;
+
+CREATE TABLE `book_info` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'This will be the primary key for the table',
+   `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'This is the title of the book',
+   `author` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'This will store the name of the author',
+   `date_published` date NOT NULL COMMENT 'This is the date the book was published',
+   `last_modified` datetime DEFAULT NULL COMMENT 'This is a timestamp of when the record was last modified',
+   `status` varchar(10) COLLATE utf8_unicode_ci NOT NULL COMMENT 'This will indicate the status of the record. Options are:\n-active\n-pending\n-deleted',
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
